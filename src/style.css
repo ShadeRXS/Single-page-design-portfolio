@@ -1,5 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+
 :root {
 
+  /* Neutral */
+  --neutral-900: hsl(0, 0%, 1%);
+  --neutral-400: hsl(30, 4%, 40%);
+  --neutral-200: hsl(28, 100%, 97%);
+  --neutral-0: hsl(0, 0%, 100%);
+
+  /* Colors */
+  --light-red-500: hsl(7, 69%, 62%);
+  --galactic-blue-500: hsl(252, 66%, 62%);
+  --summer-yellow-500: hsl(28, 89%, 67%);
+  --pink-500: hsl(0, 78%, 79%);
+  --cyan-500: hsl(172, 46%, 57%);
+  --dark-purple-500: hsl(314, 45%, 23%);
+
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-025: 2px;
+  --spacing-050: 4px;
+  --spacing-075: 6px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-800: 64px;
+  --spacing-1000: 80px;
+
+  /* Radius */
+  --radius-0: 0;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-full: 999px;
   
 }
 
@@ -77,4 +120,57 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+/* Tipografia */
 
+/* 2. Definir una clase base o aplicar reglas comunes para optimizar el código */
+.text-preset-1, 
+.text-preset-2, 
+.text-preset-3, 
+.text-preset-4, 
+.text-preset-5 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 0px;
+}
+
+/* --- TEXT PRESET 1 --- */
+.text-preset-1 {
+    font-weight: 700; /* Bold */
+    font-size: 56px;
+    line-height: 130%;
+}
+
+/* Text Preset 1 (Versión Móvil) - Cambia en pantallas menores a 768px */
+@media (max-width: 768px) {
+    .text-preset-1 {
+        font-size: 40px;
+        line-height: 120%;
+    }
+}
+
+/* --- TEXT PRESET 2 --- */
+.text-preset-2 {
+    font-weight: 700; /* Bold */
+    font-size: 40px;
+    line-height: 130%;
+}
+
+/* --- TEXT PRESET 3 --- */
+.text-preset-3 {
+    font-weight: 700; /* Bold */
+    font-size: 24px;
+    line-height: 130%;
+}
+
+/* --- TEXT PRESET 4 --- */
+.text-preset-4 {
+    font-weight: 500; /* Medium */
+    font-size: 18px;
+    line-height: 150%;
+}
+
+/* --- TEXT PRESET 5 --- */
+.text-preset-5 {
+    font-weight: 700; /* Bold */
+    font-size: 16px;
+    line-height: 150%;
+}
