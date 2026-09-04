@@ -275,3 +275,29 @@ body {
     width: 45%;
   }
 }
+
+/* Cards */
+
+.cards {
+}
+
+.ordenCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-300);
+  flex-direction: column;
+}
+
+.card__icon {
+  width: 128px;
+  height: 192px;
+  align-items: end;
+}
+
+.card__morado {
+  background-color: var(--dark-purple-500);
+  color: var(--neutral-0);
+  width: 343px;
+  height: 364px;
+  padding: 20px;
+}
