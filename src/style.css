@@ -242,6 +242,42 @@ body {
   color: var(--neutral-400);
 }
 
+/* Cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.cards__design {
+  display: flex;
+  align-items: flex-end;
+  border-radius: 0.5rem;
+  background-position: top 1.5rem right 1.5rem;
+  padding-top: 6.25rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.card__graphic {
+grid-row: span 2;
+  grid-column: span 2;
+  background-image: url("../public/pattern-graphic-design.svg");
+  background-repeat: no-repeat;
+  background-color: var(--galactic-blue-500);
+  padding-top: 12.5rem;
+  color: var(--neutral-0);
+  
+}
+
+
+
+
+
 @media (min-width: 758px) {
   .container {
     padding: 0 32px;
@@ -276,28 +312,3 @@ body {
   }
 }
 
-/* Cards */
-
-.cards {
-}
-
-.ordenCards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-300);
-  flex-direction: column;
-}
-
-.card__icon {
-  width: 128px;
-  height: 192px;
-  align-items: end;
-}
-
-.card__morado {
-  background-color: var(--dark-purple-500);
-  color: var(--neutral-0);
-  width: 343px;
-  height: 364px;
-  padding: 20px;
-}

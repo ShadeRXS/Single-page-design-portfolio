@@ -1,38 +1,40 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style.css" />
-    <title>Single-page design portfolio</title>
-  </head>
-  <body>
-    <header class="container">
-      <div class="header__main">
-        <img src="./public/logo.svg" alt="" class="header__logo" />
-        <button class="header__button text-preset-5">Free Consultation</button>
-      </div>
-      <div class="header__text__container">
-        <h1 class="header__text-seo text-preset-1">
-          Design solutions made easy
-        </h1>
-        <p class="header__text-p text-preset-4">
-          With over ten years of experience in various design disciplines, I’m
-          your one-stop shop for your design needs.
-        </p>
-      </div>
 
-      <div class="cards">
-        <span class="card__morado ordenCards"> <img src="./public/pattern-graphic-design.svg" alt="" class="card__icon"> Graphic Design</span>
-        <span class="card__amarillo ordenCards"> <img src="./public/pattern-ui-ux.svg" alt="" class="card__icon"> UI/UX</span>
-        <span class="card__rosa ordenCards"> <img src="./public/pattern-apps.svg" alt="" class="card__icon"> Apps</span>
-        <span class="card__azul ordenCards"> <img src="./public/pattern-photography.svg" alt="" class="card__icon"> Photography</span>
-        <span class="card__naranja ordenCards"> <img src="./public/pattern-illustrations.svg" alt="" class="card__icon"> Illustrations</span>
-        <span class="card__purpura ordenCards"> <img src="./public/pattern-motion-graphics.svg" alt="" class="card__icon"> Motion Graphics</span>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/style.css" />
+  <title>Single-page design portfolio</title>
+</head>
 
-    <!--
+<body>
+  <header class="container">
+    <div class="header__main">
+      <img src="./public/logo.svg" alt="" class="header__logo" />
+      <button class="header__button text-preset-5">Free Consultation</button>
+    </div>
+    <div class="header__text__container">
+      <h1 class="header__text-seo text-preset-1">
+        Design solutions made easy
+      </h1>
+      <p class="header__text-p text-preset-4">
+        With over ten years of experience in various design disciplines, I’m
+        your one-stop shop for your design needs.
+      </p>
+    </div>
+
+  </header>
+
+   <ul role="list" class="cards">
+        <li class="card__graphic cards__design">Graphic Design</li>
+        <li class="card__ui-ux cards__design">UI/UX</li>
+        <li class="card__apps cards__design">Apps</li>
+        <li class="card__photography cards__design">Photography</li>
+        <li class="card__illustrations cards__design">Illustrations</li>
+        <li class="card__motion cards__design">Motion Graphics</li>
+      </ul>
+  <!--
 
   I’m Amy, and I’d love to work on your next project
 
@@ -51,5 +53,7 @@
   Free Consultation
 
   Free Consultation
-  --></body>
+  -->
+</body>
+
 </html>
