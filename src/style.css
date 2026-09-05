@@ -76,6 +76,8 @@ dd {
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Set core body defaults */
@@ -270,10 +272,48 @@ grid-row: span 2;
   background-repeat: no-repeat;
   background-color: var(--galactic-blue-500);
   padding-top: 12.5rem;
+  padding-bottom: 6.5rem;
   color: var(--neutral-0);
   
 }
 
+.card__ui-ux {
+  background-color: var(--summer-yellow-500);
+    background-image: url("../public/pattern-ui-ux.svg");
+    background-repeat: no-repeat;
+    color: var(--neutral-0)
+}
+
+.card__apps {
+  background-color: var(--pink-500);
+    background-image: url("../public/pattern-apps.svg");
+    background-repeat: no-repeat;
+    color: var(--neutral-0)
+}
+
+.card__photography {
+  background-color: var(--light-red-500);
+    background-image: url("../public/pattern-photography.svg");
+    background-repeat: no-repeat;
+    grid-column: span 2;
+    color: var(--neutral-0)
+}
+
+.card__illustrations {
+  background-color: var(--cyan-500);
+    background-image: url("../public/pattern-illustrations.svg");
+    background-repeat: no-repeat;
+    grid-column: span 2;
+    color: var(--neutral-0)
+}
+
+.card__motion {
+  background-color: var(--dark-purple-500);
+    background-image: url("../public/pattern-motion-graphics.svg");
+    background-repeat: no-repeat;
+    grid-column: span 2;
+    color: var(--neutral-0)
+}
 
 
 
