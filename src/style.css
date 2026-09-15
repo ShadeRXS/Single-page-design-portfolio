@@ -30,6 +30,7 @@
   --spacing-600: 48px;
   --spacing-800: 64px;
   --spacing-1000: 80px;
+  --spacing-1100: 120px;
 
   /* Radius */
   --radius-0: 0;
@@ -139,24 +140,22 @@ textarea:not([rows]) {
 
 /* Tipografia */
 
-/* 2. Definir una clase base o aplicar reglas comunes para optimizar el código */
 .text-preset-1,
 .text-preset-2,
 .text-preset-3,
 .text-preset-4,
-.text-preset-5 {
+.text-preset-5,
+.text-preset-6 {
   font-family: "Plus Jakarta Sans", sans-serif;
   letter-spacing: 0px;
 }
 
-/* --- TEXT PRESET 1 --- */
 .text-preset-1 {
-  font-weight: 700; /* Bold */
+  font-weight: 700;
   font-size: 56px;
   line-height: 130%;
 }
 
-/* Text Preset 1 (Versión Móvil) - Cambia en pantallas menores a 768px */
 @media (max-width: 768px) {
   .text-preset-1 {
     font-size: 40px;
@@ -164,32 +163,34 @@ textarea:not([rows]) {
   }
 }
 
-/* --- TEXT PRESET 2 --- */
 .text-preset-2 {
-  font-weight: 700; /* Bold */
+  font-weight: 700;
   font-size: 40px;
   line-height: 130%;
 }
 
-/* --- TEXT PRESET 3 --- */
 .text-preset-3 {
-  font-weight: 700; /* Bold */
+  font-weight: 700; 
   font-size: 24px;
   line-height: 130%;
 }
 
-/* --- TEXT PRESET 4 --- */
 .text-preset-4 {
-  font-weight: 500; /* Medium */
+  font-weight: 500; 
   font-size: 18px;
   line-height: 150%;
 }
 
-/* --- TEXT PRESET 5 --- */
 .text-preset-5 {
-  font-weight: 700; /* Bold */
+  font-weight: 700;
   font-size: 16px;
   line-height: 150%;
+  color: var(--neutral-200);
+}
+
+.text-preset-6 {
+  font-weight: 500;
+  font-size: 18px;
 }
 
 /* Botones */
@@ -216,14 +217,45 @@ body {
 
 /* Contenedor principal */
 .container {
-  padding: 0 16px;
+  padding: 0 8px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 144px;
+  }
+}
+
+header {
+  margin-bottom: var(--spacing-500);
+}
+
+section {
+  margin-bottom: var(--spacing-800);
+}
+
+@media (min-width: 768px) {
+  section {
+    margin-bottom: var(--spacing-1000);
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    margin-bottom: var(--spacing-1100);
+  }
 }
 
 /* Header */
 .header__main {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--spacing-500);
 }
 
 .header__logo {
@@ -236,119 +268,214 @@ body {
   color: var(--neutral-200);
 }
 
-.header__text__container {
+.header__containerText {
   text-align: center;
 }
 
-.header__text-p {
+.header__textParagrap {
   color: var(--neutral-400);
+}
+
+@media (min-width: 768px) {
+  .header__containerText {
+    margin: 64px 0 64px 0;
+  }
+
+  .header__textSeo {
+    width: 75%;
+    margin: 0 auto var(--spacing-250) auto;
+  }
+
+  .header__textParagrap {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__containerText {
+    margin: var(--spacing-1000) 0 var(--spacing-1000) 0;
+  }
+
+  .header__textSeo {
+    width: 75%;
+    margin: 0 auto var(--spacing-250) auto;
+  }
+
+  .header__textParagrap {
+    width: 65%;
+    margin: 0 auto;
+  }
 }
 
 /* Cards */
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  text-align: left;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "graphic        graphic"
+    "ui-ux          apps"
+    "illustrations  illustrations"
+    "photography    photography"
+    "motion         motion";
+  gap: var(--spacing-250);
+  align-items: stretch;
 }
 
 .cards__design {
   display: flex;
-  align-items: flex-end;
-  border-radius: 0.5rem;
-  background-position: top 1.5rem right 1.5rem;
-  padding-top: 6.25rem;
-  padding-bottom: 1.5rem;
-  padding-left: 1.5rem;
-  font-weight: 700;
-  font-size: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--spacing-250);
+  border-radius: var(--radius-8);
+  color: var(--neutral-0);
+}
+
+.card__img {
+  display: flex;
+  margin-top: auto;
+  align-self: flex-end;
 }
 
 .card__graphic {
-grid-row: span 2;
-  grid-column: span 2;
-  background-image: url("../public/pattern-graphic-design.svg");
-  background-repeat: no-repeat;
+  grid-area: graphic;
+  width: 100%;
+  height: auto;
+  gap: var(--spacing-1000);
   background-color: var(--galactic-blue-500);
-  padding-top: 12.5rem;
-  padding-bottom: 6.5rem;
-  color: var(--neutral-0);
-  
 }
 
 .card__ui-ux {
+  grid-area: ui-ux;
+  gap: var(--spacing-500);
   background-color: var(--summer-yellow-500);
-    background-image: url("../public/pattern-ui-ux.svg");
-    background-repeat: no-repeat;
-    color: var(--neutral-0)
 }
 
 .card__apps {
+  grid-area: apps;
+  gap: var(--spacing-500);
   background-color: var(--pink-500);
-    background-image: url("../public/pattern-apps.svg");
-    background-repeat: no-repeat;
-    color: var(--neutral-0)
 }
 
 .card__photography {
-  background-color: var(--light-red-500);
-    background-image: url("../public/pattern-photography.svg");
-    background-repeat: no-repeat;
-    grid-column: span 2;
-    color: var(--neutral-0)
+  grid-area: photography;
+  gap: var(--spacing-500);
+  background-color: var(--cyan-500);
 }
 
 .card__illustrations {
-  background-color: var(--cyan-500);
-    background-image: url("../public/pattern-illustrations.svg");
-    background-repeat: no-repeat;
-    grid-column: span 2;
-    color: var(--neutral-0)
+  grid-area: illustrations;
+  gap: var(--spacing-500);
+  background-color: var(--light-red-500);
 }
 
 .card__motion {
+  grid-area: motion;
+  gap: var(--spacing-500);
   background-color: var(--dark-purple-500);
-    background-image: url("../public/pattern-motion-graphics.svg");
-    background-repeat: no-repeat;
-    grid-column: span 2;
-    color: var(--neutral-0)
 }
 
-
-
-
-@media (min-width: 758px) {
-  .container {
-    padding: 0 32px;
-  }
-
-  .header__text__container {
-    margin-top: var(--spacing-300);
-  }
-
-  .header__text-seo {
-    width: 75%;
-    margin-inline: auto;
-  }
-
-  .header__text-p {
-    width: 85%;
-    margin-inline: auto;
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "graphic      graphic       ui-ux           apps"
+      "graphic      graphic       ui-ux           apps"
+      "graphic      graphic       illustrations   illustrations"
+      "photography  photography   motion          motion";
   }
 }
 
-@media (min-width: 1395px) {
-  .container {
-    padding: 0 80px;
-  }
-
-  .header__text-seo {
-    width: 80%;
-  }
-
-  .header__text-p {
-    width: 45%;
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "graphic      graphic       ui-ux           apps            photography      photography"
+      "graphic      graphic       illustrations   illustrations   motion           motion";
   }
 }
 
+/* Perfil de usuario */
+
+.profile__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-300);
+}
+
+.profile__img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: var(--radius-full);
+}
+
+.profile__textContainer {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.textContainer__title {
+  margin: 0 0 var(--spacing-250);
+}
+
+.textContainer__paragraph {
+  color: var(--neutral-400);
+  margin-bottom: var(--spacing-400);
+}
+
+.textContainer__button {
+  background-color: var(--light-red-500);
+}
+
+@media (min-width: 768px) {
+  .profile__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-500);
+  }
+
+  .profile__textContainer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .profile__container {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-500);
+  }
+
+  .profile__textContainer {
+    text-align: start;
+    width: 50%;
+  }
+}
+
+/* Seccion de llamada */
+
+.book__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: var(--spacing-500) var(--spacing-200);
+  background-color: var(--neutral-900);
+  color: var(--neutral-200);
+  border-radius: var(--radius-10);
+}
+
+.book__title {
+  margin: 0 auto var(--spacing-300) auto;
+}
+
+.book__description {
+  margin: 0 auto var(--spacing-500) auto;
+}

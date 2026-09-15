@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/normalize.css">
   <link rel="stylesheet" href="./src/style.css" />
   <title>Single-page design portfolio</title>
 </head>
@@ -14,50 +15,82 @@
       <img src="./public/logo.svg" alt="" class="header__logo" />
       <button class="header__button text-preset-5">Free Consultation</button>
     </div>
-    <div class="header__text__container">
-      <h1 class="header__text-seo text-preset-1">
+    <div class="header__containerText">
+      <h1 class="header__textSeo text-preset-1">
         Design solutions made easy
       </h1>
-      <p class="header__text-p text-preset-4">
+      <p class="header__textParagrap text-preset-6">
         With over ten years of experience in various design disciplines, I’m
         your one-stop shop for your design needs.
       </p>
     </div>
   </header>
   <main>
-    <div class="container">
+    <section class="container">
       <ul role="list" class="cards">
-        <li class="card__graphic cards__design text-preset-3">Graphic Design</li>
-        <li class="card__ui-ux cards__design text-preset-3">UI/UX</li>
-        <li class="card__apps cards__design text-preset-3">Apps</li>
-        <li class="card__photography cards__design text-preset-3">Photography</li>
-        <li class="card__illustrations cards__design text-preset-3"> Illustrations</li>
-        <li class="card__motion cards__design text-preset-3">Motion Graphics</li>
+        <li class="card__graphic cards__design text-preset-3">
+          <img src="./public/pattern-graphic-design.svg" alt="" class="card__img" />
+          Graphic Design
+        </li>
+        <li class="card__ui-ux cards__design text-preset-3">
+          <img src="./public/pattern-ui-ux.svg" alt="" class="card__img" />
+          UI/UX
+        </li>
+        <li class="card__apps cards__design text-preset-3">
+          <img src="./public/pattern-apps.svg" alt="" class="card__img" />
+          Apps
+        </li>
+        <li class="card__photography cards__design text-preset-3">
+          <img src="./public/pattern-photography.svg" alt="" class="card__img" />
+          Photography
+        </li>
+        <li class="card__illustrations cards__design text-preset-3">
+          <img src="./public/pattern-illustrations.svg" alt="" class="card__img" />
+          Illustrations
+        </li>
+        <li class="card__motion cards__design text-preset-3">
+          <img src="./public/pattern-motion-graphics.svg" alt="" class="card__img" />
+          Motion Graphics
+        </li>
       </ul>
-    </div>
-
-    <!--
-
-  I’m Amy, and I’d love to work on your next project
-
-  I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations 
-  to complete mobile apps. I’m also handy with a camera!
-
-  Free Consultation
-
-  My Work
-
-  Book a call with me
-
-  I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a 
-  free consultation. Then we can move forward from there.
-
-  Free Consultation
-
-  Free Consultation
-  -->
-
+    </section>
+    <section class="container">
+      <div class="profile__container">
+        <img src="./public/image-amy.webp" alt="" class="profile__img" />
+        <div class="profile__textContainer">
+          <h2 class="textContainer__title text-preset-2">
+            I’m Amy, and I’d love to work on your next project
+          </h2>
+          <p class="textContainer__paragraph text-preset-4">
+            I love working with others to create beautiful design solutions.
+            I’ve designed everything from brand illustrations to complete
+            mobile apps. I’m also handy with a camera!
+          </p>
+          <button class="textContainer__button text-preset-5">
+            Free Consultation
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="book__container">
+        <h2 class="book__title text-preset-1">Book a call with me</h2>
+        <p class="book__description text-preset-4">
+          I’d love to have a chat to see how I can help you. The best first
+          step is for us to discuss your project during a free consultation.
+          Then we can move forward from there.
+        </p>
+        <button class="textContainer__button text-preset-5">
+          Free Consultation
+        </button>
+      </div>
+    </section>
   </main>
+  <footer class="container">
+    <div class="header__main">
+      <img src="./public/logo.svg" alt="" class="header__logo" />
+      <button class="header__button text-preset-5">Free Consultation</button>
+    </div>
+  </footer>
 </body>
-
 </html>
